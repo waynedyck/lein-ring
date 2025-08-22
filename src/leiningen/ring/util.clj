@@ -88,4 +88,4 @@
     (merge-fn project profiles)
     project))
 
-(def ring-version "1.13.0")
+(def ring-version "1.14.2")
