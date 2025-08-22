@@ -95,9 +95,21 @@
           :xmlns:xsi "http://www.w3.org/2001/XMLSchema-instance"
           :xsi:schemaLocation (str "http://java.sun.com/xml/ns/javaee "
                                    "http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd")
-          :version "3.0"}})
+          :version "3.0"}
 
-(def default-servlet-version "2.5")
+   "6.0" {:xmlns     "https://jakarta.ee/xml/ns/jakartaee"
+          :xmlns:xsi "http://www.w3.org/2001/XMLSchema-instance"
+          :xsi:schemaLocation (str "https://jakarta.ee/xml/ns/jakartaee "
+                                   "https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd")
+          :version "6.0"}
+
+   "6.1" {:xmlns     "https://jakarta.ee/xml/ns/jakartaee"
+          :xmlns:xsi "http://www.w3.org/2001/XMLSchema-instance"
+          :xsi:schemaLocation (str "https://jakarta.ee/xml/ns/jakartaee "
+                                   "https://jakarta.ee/xml/ns/jakartaee/web-app_6_1.xsd")
+          :version "6.1"}})
+
+(def default-servlet-version "6.0")
 
 (defn make-web-xml [project]
   (let [ring-options (:ring project)]
